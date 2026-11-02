@@ -8,6 +8,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
+import { DarkLightMode } from "./DarkLightMode.jsx";
 
 export default function Icons() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -128,6 +129,7 @@ export default function Icons() {
     <>
       <Box sx={{ flexGrow: 1 }} />
       <Box sx={{ display: { xs: "none", md: "flex" } }}>
+        <DarkLightMode />
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             <MailIcon />
