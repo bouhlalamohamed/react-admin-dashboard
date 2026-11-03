@@ -9,6 +9,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListeOne from "./ListeOne";
 import ListeTwo from "./ListeTwo";
 import ListeThree from "./ListeThree";
+import Avatar from "./Avatar";
 
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
@@ -70,7 +71,8 @@ export default function SideBar({ open, handleDrawerClose }) {
           )}
         </IconButton>
       </DrawerHeader>
-
+      <Divider />
+      <Avatar />
       <Divider />
       <List>
         <ListeOne />
