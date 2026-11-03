@@ -6,10 +6,9 @@ import { getTheme } from "./theme/index.js";
 import CssBaseline from "@mui/material/CssBaseline";
 import { DarkLightModeContext } from "../context/darkOrLightMode";
 
-
 // components
 import TopBar from "./components/TopBar/TopBar";
-import SideBar from "./components/SideBare";
+import SideBar from "./components/sideBare/SideBare";
 
 export default function MiniDrawer() {
   const [open, setOpen] = useState(false);
