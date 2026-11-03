@@ -5,11 +5,16 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-// import components
-import ListeOne from "./ListeOne";
-import ListeTwo from "./ListeTwo";
-import ListeThree from "./ListeThree";
+
 import Avatar from "./Avatar";
+import { Array1, Array2, Array3 } from "./arrayNavigationList";
+import NavigationList from "./NavigationList.jsx";
+import {
+  ContactsOutlined,
+  HomeOutlined,
+  PeopleOutlined,
+  ReceiptOutlined,
+} from "@mui/icons-material";
 
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
@@ -56,6 +61,20 @@ const Drawer = styled(MuiDrawer, {
     "& .MuiDrawer-paper": closedMixin(theme),
   }),
 }));
+export const Array = [
+  { text: "Dashboard", icon: <HomeOutlined />, path: "/" },
+  { text: "Manage Team", icon: <PeopleOutlined />, path: "/team" },
+  {
+    text: "Contacts Information",
+    icon: <ContactsOutlined />,
+    path: "/contacts",
+  },
+  {
+    text: "Invoices Balances",
+    icon: <ReceiptOutlined />,
+    path: "/invoices",
+  },
+];
 
 export default function SideBar({ open, handleDrawerClose }) {
   const theme = useTheme();
@@ -75,11 +94,13 @@ export default function SideBar({ open, handleDrawerClose }) {
       <Avatar />
       <Divider />
       <List>
-        <ListeOne />
+        <NavigationList items={Array1} open={open} />
+
         <Divider />
-        <ListeTwo />
+
+        <NavigationList items={Array2} open={open} />
         <Divider />
-        <ListeThree />
+        <NavigationList items={Array3} open={open} />
       </List>
       <Divider />
       <List></List>

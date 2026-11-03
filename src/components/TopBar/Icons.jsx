@@ -47,7 +47,6 @@ export default function Icons() {
           right: "30px",
           opacity: isMenuOpen ? 1 : 0,
           visibility: isMenuOpen ? "visible" : "hidden",
-          // transform: "rotate(45deg)",
           transition: "opacity 1.2s ease, visibility 1.1s ease",
           clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
         }}
