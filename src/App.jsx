@@ -9,6 +9,7 @@ import { DarkLightModeContext } from "../context/darkOrLightMode";
 // components
 import TopBar from "./components/TopBar/TopBar";
 import SideBar from "./components/sideBare/SideBare";
+import { Outlet } from "react-router-dom";
 
 export default function MiniDrawer() {
   const [open, setOpen] = useState(false);
@@ -27,10 +28,11 @@ export default function MiniDrawer() {
         <Box sx={{ display: "flex" }}>
           <CssBaseline />
           <TopBar handleDrawerOpen={handleDrawerOpen} open={open} />
-
           <SideBar handleDrawerClose={handleDrawerClose} open={open} />
 
-          <Box component="main" sx={{ flexGrow: 1, p: 3 }}></Box>
+          <Box component="main" sx={{ flexGrow: 1, p: 3, marginTop: "70px" }}>
+            <Outlet />
+          </Box>
         </Box>
       </DarkLightModeContext.Provider>
     </ThemeProvider>
