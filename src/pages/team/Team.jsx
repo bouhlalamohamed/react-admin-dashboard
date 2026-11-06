@@ -1,8 +1,10 @@
 import { DataGrid } from "@mui/x-data-grid";
-import { columns, mockDataTeam } from "./mockData";
+import { columns, mockDataTeam } from "../data/DataOfTeam";
 import { Box } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export default function Team() {
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -29,7 +31,8 @@ export default function Team() {
         sx={{
           "& .MuiDataGrid-scrollbar": {
             scrollbarWidth: "thin",
-            scrollbarColor: "#555 #1b1b1b",
+            scrollbarColor:
+              theme.palette.mode === "light" ? "#555 #f6f6f6" : "#555 #1b1b1b",
           },
         }}
       />
