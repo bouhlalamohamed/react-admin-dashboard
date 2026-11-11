@@ -19,9 +19,10 @@ export default function NavigationList({ items, open }) {
             component={Link}
             to={item.path}
             sx={{
-              minHeight: 48,
+              minHeight: 10,
+              py: 0.5,
               justifyContent: open ? "initial" : "center",
-              px: 2.5,
+              px: 1.5,
               bgcolor:
                 location.pathname === item.path
                   ? theme.palette.mode === "dark"
