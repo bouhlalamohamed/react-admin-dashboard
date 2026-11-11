@@ -6,6 +6,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import { Invoices } from "./pages/Invoices/Invoices.jsx";
 
 //components
 import "./index.css";
@@ -21,9 +22,9 @@ const router = createBrowserRouter(
       <Route path="team" element={<Team />} />
 
       <Route path="contacts" element={<Contact />} />
-      {/* 
+
       <Route path="invoices" element={<Invoices />} />
-      <Route path="form" element={<Form />} />
+      {/*   <Route path="form" element={<Form />} />
       <Route path="calendar" element={<Calendar />} />
       <Route path="faq" element={<FAQ />} />
       <Route path="bar" element={<Bar />} />
