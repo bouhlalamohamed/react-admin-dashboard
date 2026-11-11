@@ -206,6 +206,7 @@ export function Invoices() {
       <DataGrid
         rows={dataInvoices}
         columns={columnsInvoices}
+        x
         slots={{ toolbar: CustomToolbar }}
         showToolbar
         sx={{

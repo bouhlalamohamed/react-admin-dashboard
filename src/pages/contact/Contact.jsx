@@ -215,6 +215,7 @@ export default function GridToolbar() {
               theme.palette.mode === "light" ? "#555 #f6f6f6" : "#555 #1b1b1b",
           },
         }}
+        checkboxSelection
       />
     </Box>
   );
