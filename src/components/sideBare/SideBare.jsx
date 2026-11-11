@@ -80,7 +80,17 @@ export default function SideBar({ open, handleDrawerClose }) {
   const theme = useTheme();
 
   return (
-    <Drawer variant="permanent" open={open}>
+    <Drawer
+      variant="permanent"
+      open={open}
+      sx={{
+        "& .MuiDrawer-paper": {
+          scrollbarWidth: "thin",
+          scrollbarColor:
+            theme.palette.mode === "light" ? "#555 #f6f6f6" : "#555 #1b1b1b",
+        },
+      }}
+    >
       <DrawerHeader>
         <IconButton onClick={handleDrawerClose}>
           {theme.direction === "rtl" ? (
