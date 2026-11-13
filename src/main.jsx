@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { Invoices } from "./pages/Invoices/Invoices.jsx";
 import { Calendar } from "./pages/calendar/Calendar.jsx";
+import { Faq } from "./pages/faq/Faq.jsx";
 
 //components
 import "./index.css";
@@ -25,9 +26,10 @@ const router = createBrowserRouter(
       <Route path="contacts" element={<Contact />} />
       <Route path="calendar" element={<Calendar />} />
       <Route path="invoices" element={<Invoices />} />
+      <Route path="faq" element={<Faq />} />
       {/*   <Route path="form" element={<Form />} />
      
-      <Route path="faq" element={<FAQ />} />
+     
       <Route path="bar" element={<Bar />} />
       <Route path="pie" element={<Pie />} />
       <Route path="line" element={<Line />} />
