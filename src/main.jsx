@@ -16,6 +16,7 @@ import App from "./App.jsx";
 import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import Team from "./pages/team/Team.jsx";
 import Contact from "./pages/contact/Contact.jsx";
+import {BarChart} from "./pages/bar/BarChart.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,10 +28,11 @@ const router = createBrowserRouter(
       <Route path="calendar" element={<Calendar />} />
       <Route path="invoices" element={<Invoices />} />
       <Route path="faq" element={<Faq />} />
+       <Route path="bar" element={<BarChart />} />
       {/*   <Route path="form" element={<Form />} />
      
      
-      <Route path="bar" element={<Bar />} />
+     
       <Route path="pie" element={<Pie />} />
       <Route path="line" element={<Line />} />
       <Route path="geography" element={<Geography />} /> */}
