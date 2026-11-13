@@ -18,6 +18,7 @@ import Team from "./pages/team/Team.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import {BarChart} from "./pages/bar/BarChart.jsx";
 import {PieChart} from "./pages/Pie/PieChart.jsx";
+import {Line} from "./pages/line/Line.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,12 +32,13 @@ const router = createBrowserRouter(
       <Route path="faq" element={<Faq />} />
        <Route path="bar" element={<BarChart />} />
        <Route path="pie" element={<PieChart />} />
+       <Route path="line" element={<Line />} />
       {/*   <Route path="form" element={<Form />} />
      
      
      
       
-      <Route path="line" element={<Line />} />
+      
       <Route path="geography" element={<Geography />} /> */}
     </Route>,
   ),
