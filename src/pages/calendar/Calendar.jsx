@@ -1,18 +1,22 @@
 import { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
-import themePlugin from "@fullcalendar/react/themes/classic";
+import themePlugin from "@fullcalendar/react/themes/monarch";
 import dayGridPlugin from "@fullcalendar/react/daygrid";
 import timeGridPlugin from "@fullcalendar/react/timegrid";
 import interactionPlugin from "@fullcalendar/react/interaction";
 import { createEventId } from "./event-utils";
 
 import "@fullcalendar/react/skeleton.css";
-import "@fullcalendar/react/themes/classic/theme.css";
-import "@fullcalendar/react/themes/classic/palette.css";
-import { Box } from "@mui/material";
+import "@fullcalendar/react/themes/monarch/theme.css";
+import "@fullcalendar/react/themes/monarch/palettes/purple.css";
+import { Box} from "@mui/material";
 import "./index.css";
+import { useTheme } from "@mui/material/styles";
+
+
 
 export function Calendar() {
+  const theme = useTheme();
   const [currentEvents, setCurrentEvents] = useState([]);
 
   function handleDateSelect(selectInfo) {
@@ -50,9 +54,13 @@ export function Calendar() {
     <div className="demo-app">
       <Sidebar currentEvents={currentEvents} />
 
-      <Box className="demo-app-main">
+      <Box
+        className="demo-app-main"
+        sx={{ bgcolor: "background.default", color: "text.primary", p: 2 }}
+      >
         <FullCalendar
-          className="demo-app-calendar"
+          colorScheme={theme.palette.mode === "dark" ? "dark" : "light"}
+          className="light"
           plugins={[
             themePlugin,
             dayGridPlugin,
