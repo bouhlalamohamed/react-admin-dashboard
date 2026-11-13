@@ -19,7 +19,7 @@ export default function NavigationList({ items, open }) {
             component={Link}
             to={item.path}
             sx={{
-              minHeight: 10,
+              minHeight: 48,
               py: 0.5,
               justifyContent: open ? "initial" : "center",
               px: 1.5,
@@ -30,7 +30,7 @@ export default function NavigationList({ items, open }) {
                     : "grey.200"
                   : null,
             }}
-            onclick={() => {
+            onClick={() => {
               navigate(item.path);
             }}
           >
