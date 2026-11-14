@@ -38,17 +38,17 @@
     Germany: 2080,
   },
 ];
-export const BarChart = () => {
+export const BarChart = ({isDahboard = false}) => {
     const theme= useTheme()
   return (
-    <Box sx={{height:500}}> 
-    <ResponsiveBar /* or Bar for fixed dimensions */
+    <Box sx={{ height: isDahboard?  "280px"  :  "75vh" }}> 
+    <ResponsiveBar  
         data={data}
        keys={["Spain", "France", "Germany"]}
         indexBy="year"
         labelSkipWidth={12}
         labelSkipHeight={12}
-        legends={[
+        legends={isDahboard? [] : [
             {
                 dataFrom: 'keys',
                 anchor: 'bottom-right',
@@ -169,8 +169,8 @@ export const BarChart = () => {
         "tableCellValue": {}
     }
 }}
-        axisBottom={{ legend: 'year ', legendOffset: 40 }}
-        axisLeft={{ legend: 'salary by month', legendOffset: -50 }}
+        axisBottom={{ legend: isDahboard? null :'year ', legendOffset: 40 }}
+        axisLeft={{ legend:  isDahboard? null : 'salary by month', legendOffset: -50 }}
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
     />
     </Box>
