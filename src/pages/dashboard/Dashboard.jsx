@@ -1,5 +1,24 @@
-import React from "react";
+import {Button,Box} from "@mui/material";
+import { DownloadOutlined } from "@mui/icons-material";
+import { Row1 } from "./row1/Row1";
+import { Row2 } from "./row2/Row2";
 
 export default function Dashboard() {
-  return <div>Dashboard</div>;
+  return (
+    <Box>
+      
+        <Box sx={{ textAlign: "right", mb: 1.3 }}>
+          <Button
+            sx={{ padding: "6px 8px", textTransform: "capitalize" }}
+            variant="contained"
+            color="primary"
+          >
+            <DownloadOutlined />
+            Download Reports
+          </Button>
+        </Box>
+         <Row1 />
+         <Row2 />
+    </Box>
+  );
 }
