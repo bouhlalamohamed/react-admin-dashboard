@@ -9,6 +9,7 @@ export const CardComponent = ({ icon, title, subTitle, increase, data, scheme })
     
      
       <Paper
+      
         sx={{
           width:"330px",
           flexGrow: 1,

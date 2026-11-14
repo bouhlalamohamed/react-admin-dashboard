@@ -7,6 +7,7 @@ import { data1, data2, data3, data4 } from "../data";
 import { CardComponent } from "./Card";
 
 export const Row1 = () => {
+  
   const theme = useTheme();
 
   const cardsData = [
