@@ -269,16 +269,16 @@ const data=[
   }
 ]
 
-export const Line = () => {
+export const Line = ({isDashbord = false }) => {
     const theme =useTheme()
   return (
-    <Box sx={{ height: 400 }}>
+    <Box sx={{ height: "400px" }}>
          <ResponsiveLine /* or Line for fixed dimensions */
         data={data}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
-        axisBottom={{ legend: 'transportation', legendOffset: 36 }}
-        axisLeft={{ legend: 'count', legendOffset: -40 }}
+        axisBottom={{ legend: isDashbord ? '' : 'transportation', legendOffset: 36 }}
+        axisLeft={{ legend: isDashbord ? '' : 'count', legendOffset: -40 }}
         pointSize={10}
         pointColor={{ theme: 'background' }}
         pointBorderWidth={2}
@@ -286,7 +286,7 @@ export const Line = () => {
         pointLabelYOffset={-12}
         enableTouchCrosshair={true}
         useMesh={true}
-        legends={[
+        legends={ isDashbord ? [] : [
             {
                 anchor: 'bottom-right',
                 direction: 'column',
@@ -297,7 +297,7 @@ export const Line = () => {
             }
         ]}
           theme={{
-    "background": theme.palette.background.default,
+    "background": theme.palette.background.main,
     "text": {
         "fontSize": 11,
         "fill": theme.palette.text.primary,
@@ -325,7 +325,7 @@ export const Line = () => {
                 "strokeWidth": 1
             },
             "text": {
-                "fontSize": 11,
+                "fontSize":isDashbord ?0: 11,
                 "fill": theme.palette.text.secondary,
                 "outlineWidth": 0,
                 "outlineColor": "#ffffff"
