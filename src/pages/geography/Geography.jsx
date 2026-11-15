@@ -687,14 +687,14 @@ const data = [
     value: 7136,
   },
 ];
-export const Geography = () => {
+export const Geography = ({isDashbord = false}) => {
   const theme = useTheme();
   return (
     <Box sx={{ height: "75vh" }}>
       <ResponsiveChoropleth
         data={data}
         features={geo.features}
-        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        margin={{ top:isDashbord ? 110 : 10, right: 0, bottom: 0, left: 0 }}
         colors="nivo"
         domain={[0, 1000000]}
         unknownColor="#666666"
@@ -705,7 +705,7 @@ export const Geography = () => {
         borderWidth={0.5}
         borderColor="#152538"
         theme={{
-          background: theme.palette.background.default,
+          background: theme.palette.background.main,
           text: {
             fontSize: 11,
             fill: theme.palette.text.primary,
@@ -814,7 +814,7 @@ export const Geography = () => {
             tableCellValue: {},
           },
         }}
-        legends={[
+        legends={isDashbord ? [] : [
           {
             anchor: "bottom-left",
             direction: "column",
