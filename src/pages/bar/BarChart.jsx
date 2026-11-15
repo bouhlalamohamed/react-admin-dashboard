@@ -60,7 +60,7 @@ export const BarChart = ({isDahboard = false}) => {
             }
         ]}
         theme={{
-    "background": theme.palette.background.default,
+    "background": theme.palette.background.main,
     "text": {
         "fontSize": 11,
         "fill": "#333333",
