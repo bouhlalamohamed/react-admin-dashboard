@@ -165,6 +165,7 @@ export const Form = () => {
             type="email"
             fullWidth
             variant="outlined"
+            autoComplete="off"
           />
 
           <FormControl>
